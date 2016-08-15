@@ -1,0 +1,113 @@
+#!/usr/bin/make -f
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+include /usr/share/dpkg/default.mk
+
+export CFLAGS := $(shell dpkg-buildflags --get CFLAGS) $(shell dpkg-buildflags --get CPPFLAGS)
+export CXXFLAGS := $(shell dpkg-buildflags --get CXXFLAGS) $(shell dpkg-buildflags --get CPPFLAGS)
+export LDFLAGS := $(shell dpkg-buildflags --get LDFLAGS) -Wl,--as-needed
+export QT_SELECT := qt5
+
+DEB_HOST_ARCH ?= $(shell dpkg-architecture -qDEB_HOST_ARCH)
+DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
+
+gstab_architectures := amd64 i386 powerpc s390x
+fulldebug_architectures := none
+disabled_jit_architectures := armel mips mipsel
+disabled_pch_architectures := amd64 powerpc s390x
+
+defines+=use_system_re2=1 \
+         use_system_yasm=1 \
+         use_system_opus=1 \
+         use_system_zlib=1 \
+         use_system_speex=1 \
+         use_system_expat=1 \
+         use_system_libpng=1 \
+         use_system_libxml=1 \
+         use_system_libusb=1 \
+         use_system_libjpeg=1 \
+         use_system_libwebp=1 \
+         use_system_libxslt=1 \
+         use_system_jsoncpp=1 \
+         use_system_libevent=1 \
+         use_system_harfbuzz=1 \
+         use_system_xdg_utils=1 \
+         use_system_icu \
+         use_system_protobuf \
+         use_system_sqlite \
+         use_system_v8 \
+         use_system_ffmpeg \
+
+%:
+	dh $@ --parallel --dbg-package=libqt5webengine5-dbg --with pkgkde_symbolshelper
+
+override_dh_auto_configure:
+	# Run qmake once to create .qmake.conf and be sure to append the following values.
+	qmake WEBENGINE_CONFIG+="$(defines)"
+
+# Enable gstabs debugging symbols only on gstab_architectures.
+ifeq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH), $(gstab_architectures)))
+	echo "QMAKE_CXXFLAGS -= -g" >> .qmake.conf
+	echo "QMAKE_CXXFLAGS += -gstabs" >> .qmake.conf
+# Enable normal debugging symbols only on fulldebug_architectures.
+else ifeq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH), $(fulldebug_architectures)))
+	echo "QMAKE_CXXFLAGS += -g" >> .qmake.conf
+else
+# Disable debugging symbols in all the other archs.
+	echo "QMAKE_CXXFLAGS -= -g" >> .qmake.conf
+	echo "QMAKE_CXXFLAGS -= -gstabs" >> .qmake.conf
+endif
+
+# Disable JIT on selected architectures
+ifeq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH), $(disabled_jit_architectures)))
+	echo "QMAKE_CXXFLAGS += -DENABLE_JIT=0" >> .qmake.conf
+endif
+
+# Disable header precompliation as it creates invalid includes on certain
+# architectures causing build failure. LP: 1395661
+ifeq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH), $(disabled_pch_architectures)))
+	echo "CONFIG -= precompile_header" >> .qmake.conf
+endif
+
+	# Run qmake again now with the proper values.
+	qmake  WEBENGINE_CONFIG+="$(defines)"
+
+	# Upstream 5.6.0 RC tarball was generated improperly and has no synced headers
+	/usr/lib/$(DEB_HOST_MULTIARCH)/qt5/bin/syncqt.pl Source -version $(DEB_VERSION_UPSTREAM)
+
+override_dh_auto_build-indep:
+	dh_auto_build -- docs
+
+override_dh_auto_install-arch:
+	#make install INSTALL_ROOT=$(CURDIR)/debian/tmp
+	dh_auto_install
+	
+	# Remove rpath from the offending binaries
+	chrpath -d $(CURDIR)/debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/qt5/libexec/QtWebEngineProcess
+	
+	# Fix wrong path in pkgconfig files
+	find $(CURDIR)/debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/pkgconfig -type f -name '*.pc' \
+	-exec sed -i -e 's/$(DEB_HOST_MULTIARCH)\/$(DEB_HOST_MULTIARCH)/$(DEB_HOST_MULTIARCH)/g' {} \;
+	
+	# Remove private headers
+	rm -rfv debian/tmp/usr/include/$(DEB_HOST_MULTIARCH)/qt5/QtWebEngine/*/QtQtWebEngine
+	rm -rfv debian/tmp/usr/include/$(DEB_HOST_MULTIARCH)/qt5/QtWebEngineCore/*/QtQtWebEngineCore
+	rm -rfv debian/tmp/usr/include/$(DEB_HOST_MULTIARCH)/qt5/QtWebEngineWidgets/*/QtWebEngineWidgets
+	# And associated files
+	rm -fv debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/qt5/mkspecs/modules/qt_lib_webengine_private.pri
+	rm -fv debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/qt5/mkspecs/modules/qt_lib_webenginecore_private.pri
+	rm -fv debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/qt5/mkspecs/modules/qt_lib_webenginecoreheaders_private.pri
+	rm -fv debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/qt5/mkspecs/modules/qt_lib_webenginewidgets_private.pri
+	
+	# Remove libtool-like fileEngines
+	rm -fv debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/*.la
+
+override_dh_auto_install-indep:
+	dh_auto_build -- INSTALL_ROOT=$(CURDIR)/debian/tmp install_docs
+
+override_dh_install:
+	dh_install --fail-missing
+
+#override_dh_auto_test:
+	# Do not attempt to run anything to make build-indep work
