@@ -51,3 +51,15 @@ Description: Speech library for Qt - debugging symbols
  applications.
  .
  This package contains the debugging symbols for the QtSpeech library.
+
+Package: qt5speech-examples
+Architecture: any
+Multi-Arch: same
+Depends: ${misc:Depends},
+         ${shlibs:Depends}
+Pre-Depends: ${misc:Pre-Depends}
+Description: Speech library for Qt - Examples
+ QtSpeech provides support for text-to-speech and speech recognition in Qt
+ applications.
+ .
+ This package contains the QtSpeech examples.
