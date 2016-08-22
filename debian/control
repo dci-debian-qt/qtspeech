@@ -28,3 +28,15 @@ Description: Speech library for Qt - development files
  .
  This package contains the development files needed to build Qt 5 applications
  using the QtSpeech library.
+
+Package: libqt5speech5-dbg
+Architecture: amd64 i386 powerpc s390x
+Multi-Arch: same
+Section: debug
+Priority: extra
+Depends: libqt5speech5 (= ${binary:Version}), ${misc:Depends}
+Description: Speech library for Qt - debugging symbols
+ QtSpeech provides support for text-to-speech and speech recognition in Qt
+ applications.
+ .
+ This package contains the debugging symbols for the QtSpeech library.
