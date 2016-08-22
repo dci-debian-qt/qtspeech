@@ -4,10 +4,8 @@ Uploaders: Simon Quigley <tsimonq2@ubuntu.com>
 Section: libs
 Priority: optional
 Build-Depends: autotools-dev,
-               chrpath,
                debhelper (>= 9),
                pkg-kde-tools,
-               kbd,
                qt5-qmake,
                qtbase5-dev-tools,
                qtbase5-dev,
@@ -27,3 +25,8 @@ Depends: qtbase5-dev,
          qtdeclarative5-dev,
          ${misc:Depends}
 Description: Speech library for Qt - development files
+ QtSpeech provides support for text-to-speech and speech recognition in Qt
+ applications.
+ .
+ This package contains the development files needed to build Qt 5 applications
+ using the QtSpeech library.
