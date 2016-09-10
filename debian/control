@@ -62,3 +62,26 @@ Description: Speech library for Qt - Examples
  applications.
  .
  This package contains the QtSpeech examples.
+
+Package: qtspeech5-doc
+Priority: extra
+Architecture: all
+Section: doc
+Depends: ${misc:Depends}
+Description: Speech library for Qt - documentation
+ QtSpeech provides support for text-to-speech and speech recognition in Qt
+ applications.
+ .
+ This package contains the QCH documentation, which can be viewed in
+ Qt Assistant.
+
+Package: qtspeech5-doc-html
+Priority: extra
+Architecture: all
+Section: doc
+Depends: ${misc:Depends}
+Description: Speech library for Qt - HTML documentation
+ QtSpeech provides support for text-to-speech and speech recognition in Qt
+ applications.
+ .
+ This package contains the HTML documentation.
