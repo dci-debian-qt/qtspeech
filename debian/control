@@ -1,7 +1,7 @@
 Source: qtspeech-opensource-src
 Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Uploaders: Simon Quigley <tsimonq2@ubuntu.com>,
-           2016 Dmitry Shachnev <mitya57@debian.org>
+           Dmitry Shachnev <mitya57@debian.org>
 Section: libs
 Priority: optional
 Build-Depends: autotools-dev,
