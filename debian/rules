@@ -6,7 +6,7 @@ include /usr/share/dpkg/default.mk
 export QT_SELECT := qt5
 
 %:
-	dh $@ --parallel --dbg-package=libqt5speech5-dbg --with pkgkde_symbolshelper
+	dh $@ --parallel --with pkgkde_symbolshelper
 
 override_dh_auto_configure:
 	qmake
