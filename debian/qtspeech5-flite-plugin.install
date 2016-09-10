@@ -1,0 +1,2 @@
+usr/lib/*/cmake/Qt5TextToSpeech/Qt5TextToSpeech_QTextToSpeechEngineFlite.cmake
+usr/lib/*/qt5/plugins/texttospeech/libqttexttospeech_flite.so
