@@ -1,6 +1,6 @@
 qtspeech-opensource-src (5.8.0~alpha-1) UNRELEASED; urgency=medium
 
-  * Initial package
+  * Initial package (Closes: #837293)
   * Team upload
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sun, 21 Aug 2016 23:50:26 -0500
