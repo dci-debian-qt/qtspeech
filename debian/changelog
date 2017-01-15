@@ -1,3 +1,10 @@
+qtspeech-opensource-src (5.8.0-1) UNRELEASED; urgency=medium
+
+  [ Dmitry Shachnev ]
+  * New upstream stable release.
+
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sun, 15 Jan 2017 15:22:52 +0300
+
 qtspeech-opensource-src (5.8.0~alpha-1) experimental; urgency=medium
 
   * Initial package (Closes: #837293)
