@@ -15,9 +15,9 @@ Build-Depends-Indep: libqt5sql5-sqlite (>= 5.7.1+dfsg~),
                      qtbase5-doc-html (>= 5.7.1+dfsg~),
                      qttools5-dev-tools (>= 5.7.1~)
 Standards-Version: 3.9.8
-Vcs-Browser: https://anonscm.debian.org/cgit/pkg-kde/qt/qtspeech.git/
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-kde/qt/qtspeech.git
 Vcs-Git: https://anonscm.debian.org/git/pkg-kde/qt/qtspeech.git
-Homepage: https://doc-snapshots.qt.io/qt5-dev/qtspeech-index.html
+Homepage: https://doc.qt.io/qt-5/qtspeech-index.html
 
 Package: libqt5texttospeech5-dev
 Architecture: any
