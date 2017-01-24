@@ -1,13 +1,12 @@
-qtspeech-opensource-src (5.8.0-1) UNRELEASED; urgency=medium
+qtspeech-opensource-src (5.8.0-1) experimental; urgency=medium
 
-  [ Dmitry Shachnev ]
   * New upstream stable release.
   * Make the -dev package depend on libqt5texttospeech5 (LP: #1656535).
   * Bump Qt build-dependencies to 5.7.1.
   * Update Vcs-Browser and Homepage links.
   * Update debian/watch to track stable releases.
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sun, 15 Jan 2017 15:22:52 +0300
+ -- Dmitry Shachnev <mitya57@debian.org>  Tue, 24 Jan 2017 13:09:57 +0300
 
 qtspeech-opensource-src (5.8.0~alpha-1) experimental; urgency=medium
 
