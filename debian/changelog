@@ -1,8 +1,8 @@
-qtspeech-opensource-src (5.9.0-1) UNRELEASED; urgency=medium
+qtspeech-opensource-src (5.9.0-1) experimental; urgency=medium
 
   * New upstream release.
 
- -- Simon Quigley <tsimonq2@ubuntu.com>  Mon, 29 May 2017 18:19:08 -0500
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Sun, 11 Jun 2017 14:57:36 -0500
 
 qtspeech-opensource-src (5.8.0-1) experimental; urgency=medium
 
