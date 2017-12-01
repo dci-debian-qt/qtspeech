@@ -6,6 +6,14 @@ qtspeech-opensource-src (5.9.3-0neon) UNRELEASED; urgency=medium
 
  -- Jonathan Riddell <jr@jriddell.org>  Wed, 22 Nov 2017 17:23:10 +0000
 
+qtspeech-opensource-src (5.9.1-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Bump Qt build-dependencies to 5.9.1.
+  * Bump Standards-Version to 4.0.0, no changes needed.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Mon, 17 Jul 2017 21:04:27 +0300
+
 qtspeech-opensource-src (5.9.0-1) experimental; urgency=medium
 
   * New upstream release.
