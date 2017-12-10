@@ -1,5 +1,6 @@
 Source: qtspeech-opensource-src
-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+XSBC-Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Uploaders: Simon Quigley <tsimonq2@ubuntu.com>,
            Dmitry Shachnev <mitya57@debian.org>
 Section: libs
