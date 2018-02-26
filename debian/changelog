@@ -1,8 +1,8 @@
-qtspeech-opensource-src (5.9.4-0ubuntu1) UNRELEASED; urgency=medium
+qtspeech-opensource-src (5.9.4-0ubuntu1) bionic; urgency=medium
 
   * New upstream release.
 
- -- Simon Quigley <tsimonq2@ubuntu.com>  Sun, 25 Feb 2018 19:53:15 -0600
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Sun, 25 Feb 2018 19:58:03 -0600
 
 qtspeech-opensource-src (5.9.3-0ubuntu1) bionic; urgency=medium
 
