@@ -8,12 +8,12 @@ Priority: optional
 Build-Depends: debhelper (>= 9),
                flite1-dev,
                pkg-kde-tools,
-               qtbase5-dev (>= 5.9.3+dfsg~),
-               qtbase5-private-dev (>= 5.9.3+dfsg~),
-               qtmultimedia5-dev (>= 5.9.3~)
-Build-Depends-Indep: libqt5sql5-sqlite (>= 5.9.3+dfsg~),
-                     qtbase5-doc-html (>= 5.9.3+dfsg~),
-                     qttools5-dev-tools (>= 5.9.3~)
+               qtbase5-dev (>= 5.9.4+dfsg~),
+               qtbase5-private-dev (>= 5.9.4+dfsg~),
+               qtmultimedia5-dev (>= 5.9.4~)
+Build-Depends-Indep: libqt5sql5-sqlite (>= 5.9.4+dfsg~),
+                     qtbase5-doc-html (>= 5.9.4+dfsg~),
+                     qttools5-dev-tools (>= 5.9.4~)
 Standards-Version: 4.0.0
 Vcs-Browser: https://anonscm.debian.org/cgit/pkg-kde/qt/qtspeech.git
 Vcs-Git: https://anonscm.debian.org/git/pkg-kde/qt/qtspeech.git
