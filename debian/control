@@ -5,7 +5,7 @@ Uploaders: Simon Quigley <tsimonq2@ubuntu.com>,
            Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>
 Section: libs
 Priority: optional
-Build-Depends: debhelper (>= 9),
+Build-Depends: debhelper (>= 11),
                flite1-dev,
                pkg-kde-tools,
                qtbase5-dev (>= 5.10.1+dfsg~),
