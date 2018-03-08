@@ -8,6 +8,9 @@ qtspeech-opensource-src (5.10.1-1) UNRELEASED; urgency=medium
   * Add myself to Uploaders.
   * Switch Vcs-[Git Browser] to salsa.debian.org.
   * Switch to compat 11.
+  * Do not use qmake directly anymore. This with compat 11 ensures the
+    submodule can be crossbuilt.
+    - Build and run tests.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 08 Mar 2018 09:56:17 -0300
 
