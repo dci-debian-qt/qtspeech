@@ -1,6 +1,5 @@
-qtspeech-opensource-src (5.10.1-1) UNRELEASED; urgency=medium
+qtspeech-opensource-src (5.10.1-1) experimental; urgency=medium
 
-  [ Lisandro Damián Nicanor Pérez Meyer ]
   * New upstream release.
     - Bump Qt build dependencies.
   * Update watch file to follow upstream's new naming convention.
@@ -21,7 +20,7 @@ qtspeech-opensource-src (5.10.1-1) UNRELEASED; urgency=medium
     - Switch priorities "extra" to "optional".
   * Add myself to debian/copyright.
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 08 Mar 2018 09:56:17 -0300
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Thu, 08 Mar 2018 11:43:04 -0300
 
 qtspeech-opensource-src (5.9.1-1) experimental; urgency=medium
 
