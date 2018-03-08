@@ -17,6 +17,8 @@ qtspeech-opensource-src (5.10.1-1) UNRELEASED; urgency=medium
     - Add new binary package qtspeech5-speechd-plugin.
     - Add plugin's cmake file to the dev package. I'm not really sure this is
       needed.
+  * Bump Standards-Version to 4.1.3.
+    - Switch priorities "extra" to "optional".
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 08 Mar 2018 09:56:17 -0300
 
