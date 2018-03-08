@@ -11,6 +11,7 @@ qtspeech-opensource-src (5.10.1-1) UNRELEASED; urgency=medium
   * Do not use qmake directly anymore. This with compat 11 ensures the
     submodule can be crossbuilt.
     - Build and run tests.
+  * Update symbols files with current build log.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 08 Mar 2018 09:56:17 -0300
 
