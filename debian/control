@@ -83,7 +83,6 @@ Description: Speech library for Qt - Examples
  This package contains the QtSpeech examples.
 
 Package: qtspeech5-doc
-Priority: optional
 Architecture: all
 Build-Profiles: <!nodoc>
 Section: doc
@@ -96,7 +95,6 @@ Description: Speech library for Qt - documentation
  Qt Assistant.
 
 Package: qtspeech5-doc-html
-Priority: optional
 Architecture: all
 Build-Profiles: <!nodoc>
 Section: doc
