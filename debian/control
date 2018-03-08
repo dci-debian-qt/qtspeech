@@ -7,6 +7,8 @@ Section: libs
 Priority: optional
 Build-Depends: debhelper (>= 11),
                flite1-dev,
+               libasound2-dev,
+               libspeechd-dev,
                pkg-kde-tools,
                qtbase5-dev (>= 5.10.1+dfsg~),
                qtbase5-private-dev (>= 5.10.1+dfsg~),

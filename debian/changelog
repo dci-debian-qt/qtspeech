@@ -12,6 +12,8 @@ qtspeech-opensource-src (5.10.1-1) UNRELEASED; urgency=medium
     submodule can be crossbuilt.
     - Build and run tests.
   * Update symbols files with current build log.
+  * Add libasound2-dev and libspeechd-dev as build dependencies, required to
+    add flite_alsa and speechd support.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 08 Mar 2018 09:56:17 -0300
 
