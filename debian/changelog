@@ -14,6 +14,7 @@ qtspeech-opensource-src (5.10.1-1) UNRELEASED; urgency=medium
   * Update symbols files with current build log.
   * Add libasound2-dev and libspeechd-dev as build dependencies, required to
     add flite_alsa and speechd support.
+    - Add new binary package qtspeech5-speechd-plugin.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 08 Mar 2018 09:56:17 -0300
 
