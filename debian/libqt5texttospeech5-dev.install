@@ -1,6 +1,7 @@
 usr/include/*/qt5/QtTextToSpeech/*
 usr/lib/*/cmake/Qt5TextToSpeech/Qt5TextToSpeechConfig.cmake
 usr/lib/*/cmake/Qt5TextToSpeech/Qt5TextToSpeechConfigVersion.cmake
+usr/lib/*/cmake/Qt5TextToSpeech/Qt5TextToSpeech_QTextToSpeechPluginSpeechd.cmake
 usr/lib/*/libQt5TextToSpeech.prl
 usr/lib/*/libQt5TextToSpeech.so
 usr/lib/*/pkgconfig/Qt5TextToSpeech.pc
