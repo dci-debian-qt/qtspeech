@@ -5,7 +5,7 @@ Uploaders: Simon Quigley <tsimonq2@ubuntu.com>,
            Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>
 Section: libs
 Priority: optional
-Build-Depends: debhelper (>= 11),
+Build-Depends: debhelper (>= 9),
                flite1-dev,
                libasound2-dev,
                libspeechd-dev,
