@@ -1,6 +1,6 @@
-qtspeech-opensource-src (5.11.0-0neon) xenial; urgency=medium
+qtspeech-opensource-src (5.11.1-0neon) xenial; urgency=medium
 
-  * Release 5.11 to neon
+  * Release 5.11.1 to neon
 
  -- Bhushan Shah <bshah@kde.org>  Fri, 01 Jun 2018 08:25:21 +0000
 
