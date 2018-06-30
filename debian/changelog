@@ -1,13 +1,12 @@
-qtspeech-opensource-src (5.11.1-1) UNRELEASED; urgency=medium
+qtspeech-opensource-src (5.11.1-1) experimental; urgency=medium
 
-  [ Simon Quigley ]
   * New upstream release.
   * Bump Standards-version to 4.1.4, no changes needed.
   * Bump build dependencies to 5.11.1.
   * Update symbols from amd64 build logs.
   * Remove --parallel from debian/rules; it's already the default.
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Tue, 26 Jun 2018 14:33:43 -0500
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Sat, 30 Jun 2018 17:14:41 -0500
 
 qtspeech-opensource-src (5.10.1-2) unstable; urgency=medium
 
