@@ -4,6 +4,11 @@ qtspeech-opensource-src (5.11.2-1) UNRELEASED; urgency=medium
   * New upstream release.
     - Bump Qt build dependencies.
 
+  [ Dmitry Shachnev ]
+  * Update the command to run tests:
+    - Xvfb is not needed in this module.
+    - Set QT_HASH_SEED=0 to make the plugin loader choose flite plugin.
+
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Tue, 09 Oct 2018 14:19:08 -0300
 
 qtspeech-opensource-src (5.11.1-2) unstable; urgency=medium
