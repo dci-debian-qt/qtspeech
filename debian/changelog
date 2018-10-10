@@ -1,4 +1,4 @@
-qtspeech-opensource-src (5.11.2-1) UNRELEASED; urgency=medium
+qtspeech-opensource-src (5.11.2-1) experimental; urgency=medium
 
   [ Lisandro Damián Nicanor Pérez Meyer ]
   * New upstream release.
@@ -12,7 +12,7 @@ qtspeech-opensource-src (5.11.2-1) UNRELEASED; urgency=medium
   * Bump years in debian/copyright.
   * Bump Standards-Version to 4.2.1, no changes needed.
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Tue, 09 Oct 2018 14:19:08 -0300
+ -- Dmitry Shachnev <mitya57@debian.org>  Wed, 10 Oct 2018 13:53:58 +0300
 
 qtspeech-opensource-src (5.11.1-2) unstable; urgency=medium
 
