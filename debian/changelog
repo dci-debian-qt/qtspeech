@@ -9,6 +9,7 @@ qtspeech-opensource-src (5.11.2-1) UNRELEASED; urgency=medium
     - Xvfb is not needed in this module.
     - Set QT_HASH_SEED=0 to make the plugin loader choose flite plugin.
   * Use dh_missing instead of deprecated dh_install --fail-missing.
+  * Bump years in debian/copyright.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Tue, 09 Oct 2018 14:19:08 -0300
 
