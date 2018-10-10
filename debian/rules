@@ -33,6 +33,6 @@ override_dh_missing:
 	dh_missing --fail-missing
 
 override_dh_auto_test-arch:
-	dh_auto_test -- -Ctests/auto QT_HASH_SEED=0
+	dh_auto_test -- -Ctests/auto QT_HASH_SEED=0 QT_QPA_PLATFORM=minimal
 
 override_dh_auto_test-indep:
