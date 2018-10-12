@@ -2,6 +2,7 @@
 DH_VERBOSE = 1
 
 include /usr/share/dpkg/default.mk
+include /usr/share/dpkg/architecture.mk
 
 export QT_SELECT := qt5
 
@@ -33,6 +34,10 @@ override_dh_missing:
 	dh_missing --fail-missing
 
 override_dh_auto_test-arch:
+ifeq ($(DEB_HOST_ARCH),s390x)
+	-dh_auto_test -- -Ctests/auto QT_HASH_SEED=0 QT_QPA_PLATFORM=minimal
+else
 	dh_auto_test -- -Ctests/auto QT_HASH_SEED=0 QT_QPA_PLATFORM=minimal
+endif
 
 override_dh_auto_test-indep:
