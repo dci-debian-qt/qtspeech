@@ -1,3 +1,8 @@
+qtspeech-opensource-src (5.11.2-3) UNRELEASED; urgency=medium
+
+
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Mon, 22 Oct 2018 00:06:36 +0300
+
 qtspeech-opensource-src (5.11.2-2) unstable; urgency=medium
 
   * Make tests non-fatal on s390x because of bug #910792.
