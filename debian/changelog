@@ -1,5 +1,7 @@
 qtspeech-opensource-src (5.11.2-3) UNRELEASED; urgency=medium
 
+  [ Dmitry Shachnev ]
+  * Make tests fatal on s390x again, bug #910792 has been fixed.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Mon, 22 Oct 2018 00:06:36 +0300
 
