@@ -1,4 +1,4 @@
-qtspeech-opensource-src (5.11.2-3) UNRELEASED; urgency=medium
+qtspeech-opensource-src (5.11.3-1) UNRELEASED; urgency=medium
 
   [ Dmitry Shachnev ]
   * Make tests fatal on s390x again, bug #910792 has been fixed.
